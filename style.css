@@ -215,7 +215,24 @@ body {
     color: white;
 }
 
+main {
+    max-width: 80.0625rem;
+   margin-inline: auto;
+}
+
 header {
+    display: flex; 
+    justify-content: space-between;  
+    align-items: center;
+    margin-block-start: 5rem;
+    margin-block-end: 4rem;
+}
+
+ul {
     display: flex;
-    
+    gap: 3.5rem;
+}
+
+li:hover {
+    color: var(--color-blue-300);
 }
