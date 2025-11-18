@@ -1,32 +1,35 @@
-
-
 :root {
-  /* --- Base Colors --- */
-  --color-white: #FFFFFF;
-  --color-black: #000000;
+    /* --- Base Colors --- */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
 
-  /* --- Navy Palette --- */
-  /* Görselde başlık 'Brown' olsa da etiketler 'Navy' olduğu için Navy kullanılmıştır */
-  --color-navy-950: #0B1524;
-  --color-navy-900: #181F2B;
-  --color-navy-850: #1B2330;
-  --color-navy-800: #202A3C;
-  --color-navy-50:  #DFE4F0;
+    /* --- Navy Palette --- */
+    /* Görselde başlık 'Brown' olsa da etiketler 'Navy' olduğu için Navy kullanılmıştır */
+    --color-navy-950: #0B1524;
+    --color-navy-900: #181F2B;
+    --color-navy-850: #1B2330;
+    --color-navy-800: #202A3C;
+    --color-navy-50: #DFE4F0;
 
-  /* --- Blue Palette --- */
-  --color-blue-300: #62E0D9;
-  --color-blue-250: #8ADAE3;
+    /* --- Blue Palette --- */
+    --color-blue-300: #62E0D9;
+    --color-blue-250: #8ADAE3;
 
-  /* --- Red Palette --- */
-  --color-red-500: #FF4242;
+    /* --- Red Palette --- */
+    --color-red-500: #FF4242;
 
-  /* --- Gray Palette --- */
-  --color-gray-400: #C0C0C0;
+    /* --- Gray Palette --- */
+    --color-gray-400: #C0C0C0;
 
-  /* --- Gradients --- */
-  --gradient-1-start: #63E1D9;
-  --gradient-1-end:   #34A0CD;
-  
-  /* Kullanım kolaylığı için tam gradient tanımı: */
-  --gradient-primary: linear-gradient(90deg, var(--gradient-1-start) 0%, var(--gradient-1-end) 100%);
+    /* --- Gradients --- */
+    --gradient-1-start: #63E1D9;
+    --gradient-1-end: #34A0CD;
+
+    /* Kullanım kolaylığı için tam gradient tanımı: */
+    --gradient-primary: linear-gradient(90deg, var(--gradient-1-start) 0%, var(--gradient-1-end) 100%);
+
+    /* --- Font Families --- */
+    --font-primary: 'Raleway', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+
 }
