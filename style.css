@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.text-preset-1 {
+h1, .text-preset-1 {
   font-family: var(--font-primary);
   font-weight: 700; /* Bold */
   font-size: 40px;
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.text-preset-2 {
+h2, .text-preset-2 {
   font-family: var(--font-primary);
   font-weight: 700;
   font-size: 20px;
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.text-preset-3-bold {
+h3, .text-preset-3-bold {
   font-family: var(--font-primary);
   font-weight: 700;
   font-size: 16px;
@@ -236,3 +236,7 @@ ul {
 li:hover {
     color: var(--color-blue-300);
 }
+
+
+/*------ HERO CONTAINER ------ */
+
