@@ -388,6 +388,47 @@ li:hover {
 }
 
 
+/*------- comments --------*/
+
+.comments-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-block: 11.25rem 13.75rem; 
+    position: relative;
+   
+}
+
+.comments-box {
+    background-color: var(--color-navy-800);
+     border-radius: .25rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+     padding: 2rem 1.5rem;
+}
+
+.comments-box-profile {
+    display: flex;
+    gap: .5rem;
+}
+
+.comments-box-profile img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.comments-container::before {
+    content: url(images/bg-quotes.png);
+    position: absolute;
+    z-index: -10;
+    top: -35px;
+    left: -8px;
+  
+}
+
+
 /*--------- MEDIA QUERY ---------*/
 
 
@@ -424,7 +465,6 @@ li:hover {
     grid-template-columns: 1fr;
 
     }
-
 
 }
 
