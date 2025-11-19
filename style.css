@@ -309,6 +309,40 @@ li:hover {
 }
 
 
+/*-------- FEATURES --------*/
+
+.features-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12.5rem;
+    margin-block: 11.25rem;
+    
+
+}
+
+.first-container , .second-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+
+.box p {
+   margin-block-start: .5rem ;
+
+
 /*--------- MEDIA QUERY ---------*/
 
 
