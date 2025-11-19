@@ -29,6 +29,7 @@
     --gradient-1-end: #34A0CD;
 
     /* Kullanım kolaylığı için tam gradient tanımı: */
+
     --gradient-primary: linear-gradient(90deg, var(--gradient-1-start) 0%, var(--gradient-1-end) 100%);
 
     /* --- Font Families --- */
@@ -37,192 +38,234 @@
 
 }
 
-   /* CSS RESET START  */
+/* CSS RESET START  */
 
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
+    html {
+        interpolate-size: allow-keywords;
+    }
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }
 
 p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+    text-wrap: pretty;
 }
 
-#root, #__next {
-  isolation: isolate;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
 }
 
- a {
+#root,
+#__next {
+    isolation: isolate;
+}
+
+a {
     text-decoration: none;
     color: inherit;
- } 
+}
 
- ul {
+ul {
     list-style: none;
- }
+}
 
 
 /* CSS RESET END */
 
 
 
-h1, .text-preset-1 {
-  font-family: var(--font-primary);
-  font-weight: 700; /* Bold */
-  font-size: 40px;
-  line-height: 1.2; /* 120% */
-  letter-spacing: 0px;
+h1,
+.text-preset-1 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    /* Bold */
+    font-size: 40px;
+    line-height: 1.2;
+    /* 120% */
+    letter-spacing: 0px;
 }
 
 
-h2, .text-preset-2 {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0px;
+h2,
+.text-preset-2 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0px;
 }
 
 
-h3, .text-preset-3-bold {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0px;
+h3,
+button,
+.text-preset-3-bold {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0px;
 }
 
-li, .text-preset-3-regular {
-  font-family: var(--font-primary);
-  font-weight: 400; /* Regular */
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0px;
+li,
+.text-preset-3-regular {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    /* Regular */
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0px;
 }
 
 
 .text-preset-4 {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0px;
 }
 
 .text-preset-5 {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0px;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0px;
 }
 
 
 .text-preset-6 {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5; /* 150% */
-  letter-spacing: 0px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0px;
 }
 
 .text-preset-7-bold {
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0px;
 }
 
 
 .text-preset-7-regular {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0px;
 }
 
 
 .text-preset-8 {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  letter-spacing: 0px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0px;
 }
 
 .text-preset-9-bold {
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
 }
 
 
 .text-preset-9-regular {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 1.8; /* 180% */
-  letter-spacing: 0.5px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.8;
+    /* 180% */
+    letter-spacing: 0.5px;
 }
 
 .text-preset-10 {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  font-size: 7px;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
 }
 
+section {
+    margin-inline: auto;
+}
 
 body {
+    min-height: 100vh;
     background-color: var(--color-navy-850);
     color: white;
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
+
 
 main {
     max-width: 80.0625rem;
-   margin-inline: auto;
+    margin-inline: auto;
+    padding-inline: 5rem;
 }
 
 header {
-    display: flex; 
-    justify-content: space-between;  
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-block-start: 5rem;
     margin-block-end: 4rem;
@@ -239,4 +282,129 @@ li:hover {
 
 
 /*------ HERO CONTAINER ------ */
+
+
+.hero-container {
+    width: 45rem;
+    text-align: center;
+}
+
+.hero-container h1 {
+    margin-block: 3.5rem 2.5rem;
+}
+
+.hero-container img {
+    max-width: 45rem;
+    min-height: 534px;
+
+}
+
+.btn {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 1.75rem;
+    padding: 1.125rem 5.9375rem;
+    margin-block-start: 2rem;
+}
+
+
+/*--------- MEDIA QUERY ---------*/
+
+
+
+@media screen and (max-width:850px) {
+
+     .logo {
+        width: 8.75rem;
+    }
+
+    ul {
+        gap: 3rem;
+    }
+
+    main {
+        padding-inline: 3.375rem;
+    }
+
+    .hero-container {
+        max-width: 41.25rem;
+    }
+
+    .hero-container img {
+        max-width: 660px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+     main {
+        padding-inline: 2rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    ul {
+        gap: 2rem;
+    }
+
+    .hero-container {
+        max-width: 35rem;
+    }
+
+    .hero-container img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width:550px) {
+     
+     main {
+        padding-inline: 1rem;
+    }
+
+    .logo {
+        width: 4.375rem;
+    }
+
+
+     ul {
+        gap: 1rem;
+    }
+
+    .hero-container {
+        max-width: 21.875rem;
+    }
+
+    .hero-container h1 {
+        margin-bottom: 0;
+    }
+    
+     .hero-container p {
+        margin-block: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
