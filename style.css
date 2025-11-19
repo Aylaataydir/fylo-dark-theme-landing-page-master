@@ -411,6 +411,7 @@ li:hover {
 .comments-box-profile {
     display: flex;
     gap: .5rem;
+    margin-top: auto;
 }
 
 .comments-box-profile img {
@@ -424,9 +425,46 @@ li:hover {
     position: absolute;
     z-index: -10;
     top: -35px;
-    left: -8px;
-  
+    left: -8px; 
 }
+
+/* access container  */
+
+.access-container {
+margin-inline: auto;
+background-color: var(--color-navy-850);
+padding: 3rem 5rem;
+text-align: center;
+max-width: 53.9375rem;
+
+}
+
+.email-box {
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+   
+}
+
+.email-box input {
+    width: 30rem;
+     height: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+    padding-inline-start: 1rem;
+    
+}
+
+.email-box button {
+   background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 1.75rem;
+    padding: 1rem 1.25rem;
+}
+
 
 
 /*--------- MEDIA QUERY ---------*/
