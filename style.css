@@ -250,10 +250,11 @@ body {
     min-height: 100vh;
     background-color: var(--color-navy-850);
     color: white;
-    background-image: url(images/bg-curvy-desktop.svg);
-    background-position: center;
+    /* background-image: url(images/bg-curvy-desktop.svg);
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 100%;
+    background-attachment: fixed; */
 }
 
 
@@ -261,6 +262,12 @@ main {
     max-width: 80.0625rem;
     margin-inline: auto;
     padding-inline: 5rem;
+
+    background-image:url(images/bg-curvy-desktop.svg);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: 100%;  
+    /* background-attachment: fixed; */
 }
 
 header {
@@ -408,6 +415,14 @@ li:hover {
     .hero-container img {
         max-width: 660px;
         height: auto;
+    }
+
+    /* productive  */ 
+
+    .productive-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
     }
 
 
