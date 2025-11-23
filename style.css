@@ -250,24 +250,19 @@ body {
     min-height: 100vh;
     background-color: var(--color-navy-850);
     color: white;
-    /* background-image: url(images/bg-curvy-desktop.svg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed; */
-}
 
+    
+     background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 1050px, hsl(218, 28%, 13%) 1050px);
+    background-size: 100% auto;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
 
 main {
     max-width: 80.0625rem;
     margin-inline: auto;
     padding-inline: 5rem;
-
-    background-image: url(images/bg-curvy-desktop.svg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    /* background-attachment: fixed; */
 }
 
 header {
@@ -313,6 +308,8 @@ li:hover {
     border-radius: 1.75rem;
     padding: 1.125rem 5.9375rem;
     margin-block-start: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
 
@@ -323,8 +320,8 @@ li:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    align-items: center;
-    gap: 12.5rem;
+    /* align-items: center; */
+    gap: 100px;
     max-width: 56.6875rem;
     margin-block: 11.25rem;
 }
@@ -343,6 +340,13 @@ li:hover {
     align-items: center;
     gap: 1rem;
     text-align: center;
+    padding: 20px;
+}
+
+
+.box:hover {
+    border: 1px solid var(--color-blue-300);
+    border-radius: 10px;
 }
 
 .box p {
@@ -433,9 +437,11 @@ li:hover {
 .access-container {
     margin-inline: auto;
     background-color: var(--color-navy-850);
+    border-radius: .5625rem;
     padding: 3rem 5rem;
     text-align: center;
     max-width: 53.9375rem;
+    box-shadow: 5px 5px 5px rgb(11, 11, 11);
     position: absolute;
     top: -140px;
     left: 20%;
@@ -455,6 +461,7 @@ li:hover {
     height: 3rem;
     border-radius: 1.5rem;
     border: none;
+    outline: none;
     padding-inline-start: 1rem;
 
 }
@@ -465,14 +472,21 @@ li:hover {
     border: none;
     border-radius: 1.75rem;
     padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
+.email-box button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, var(--gradient-1-end) 0%, var(--gradient-1-start) 100%);
+}
 
 /*-------- footer ------- */
 
 footer {
     background-color: var(--color-navy-950);
-    padding-block: 10.125rem 3.5rem;
+    padding-block: 12.5rem 3.5rem;
     padding-inline: 5rem;
     max-width: 90rem;
     margin-inline: auto;
@@ -496,7 +510,6 @@ footer img {
     display: inline-block;
     margin-block-end: 1rem;
 }
-
 
 .contact-box {
     display: flex;
@@ -529,6 +542,10 @@ footer img {
     gap: 1rem;
 }
 
+.social-icons i:hover {
+    color: var(--color-blue-300);
+}
+
 .social-icons a {
     border: 1px solid white;
     border-radius: 50%;
@@ -541,13 +558,18 @@ footer img {
 }
 
 
-
-
 /*--------- MEDIA QUERY ---------*/
 
 
 
 @media screen and (max-width:850px) {
+
+    body {
+         background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom,transparent 550px, hsl(218, 28%, 13%) 8550px);
+  background-size: 100% auto;
+  background-position: center 12%; 
+  background-repeat: no-repeat;
+    }
 
     .logo {
         width: 8.75rem;
@@ -636,7 +658,7 @@ footer img {
 
 }
 
-
+/* 750px   */
 
 @media screen and (max-width:750px) {
 
@@ -675,11 +697,10 @@ footer img {
     .productive-container {
         grid-template-columns: 1fr;
     }
-
-
-
 }
 
+
+/* 550px */
 
 
 @media screen and (max-width:550px) {
@@ -761,6 +782,32 @@ footer img {
     .social-icons {
         justify-content: center;
     }
+}
 
 
+
+
+/* Gözlemlenen tüm ana konteynerler için başlangıç görünümünü ayarla */
+
+.hero-container,
+.box, 
+.productive-container, 
+.comments-box, 
+.access-container,
+.boxes /* Feature kutuları da ayrı ayrı animasyon alabilir */
+{
+    /* Animasyon için yumuşak geçişi (transition) tanımla */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    
+    /* Başlangıç Durumu: Hafifçe aşağıda ve gizli */
+    opacity: 0;
+    transform: translateY(40px); 
+}
+
+
+/* JavaScript bu sınıfı eklediğinde animasyon gerçekleşir */
+.animate-in {
+    /* Bitiş Durumu: Tamamen görünür ve orijinal konumunda */
+    opacity: 1;
+    transform: translateY(0); 
 }
