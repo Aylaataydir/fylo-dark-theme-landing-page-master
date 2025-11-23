@@ -251,8 +251,8 @@ body {
     background-color: var(--color-navy-850);
     color: white;
 
-    
-     background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 1050px, hsl(218, 28%, 13%) 1050px);
+
+    background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 1050px, hsl(218, 28%, 13%) 1050px);
     background-size: 100% auto;
     background-position: center 20%;
     background-repeat: no-repeat;
@@ -482,6 +482,14 @@ li:hover {
     background: linear-gradient(90deg, var(--gradient-1-end) 0%, var(--gradient-1-start) 100%);
 }
 
+.error {
+    display: none;
+    color: var(--color-red-500);
+    text-align: left;
+    padding-left: 1.875rem;
+    padding-block-start: 10px;
+}
+
 /*-------- footer ------- */
 
 footer {
@@ -565,10 +573,10 @@ footer img {
 @media screen and (max-width:850px) {
 
     body {
-         background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom,transparent 550px, hsl(218, 28%, 13%) 8550px);
-  background-size: 100% auto;
-  background-position: center 12%; 
-  background-repeat: no-repeat;
+        background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 550px, hsl(218, 28%, 13%) 8550px);
+        background-size: 100% auto;
+        background-position: center 12%;
+        background-repeat: no-repeat;
     }
 
     .logo {
@@ -790,18 +798,20 @@ footer img {
 /* Gözlemlenen tüm ana konteynerler için başlangıç görünümünü ayarla */
 
 .hero-container,
-.box, 
-.productive-container, 
-.comments-box, 
+.box,
+.productive-container,
+.comments-box,
 .access-container,
-.boxes /* Feature kutuları da ayrı ayrı animasyon alabilir */
-{
+.boxes
+
+/* Feature kutuları da ayrı ayrı animasyon alabilir */
+    {
     /* Animasyon için yumuşak geçişi (transition) tanımla */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    
+
     /* Başlangıç Durumu: Hafifçe aşağıda ve gizli */
     opacity: 0;
-    transform: translateY(40px); 
+    transform: translateY(40px);
 }
 
 
@@ -809,5 +819,5 @@ footer img {
 .animate-in {
     /* Bitiş Durumu: Tamamen görünür ve orijinal konumunda */
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
 }
