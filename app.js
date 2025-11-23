@@ -4,19 +4,19 @@
 const ANIMATION_CLASS = 'animate-in';
 
 const observerOptions = {
-  threshold: 0.3, 
-  rootMargin: '0px 0px -50px 0px' 
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 
 function handleIntersect(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add(ANIMATION_CLASS);
-      
-      observer.unobserve(entry.target); 
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add(ANIMATION_CLASS);
+
+            observer.unobserve(entry.target);
+        }
+    });
 }
 
 const observer = new IntersectionObserver(handleIntersect, observerOptions);
@@ -24,12 +24,12 @@ const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
 
 const animateElements = document.querySelectorAll(
-  '.hero-container, .box, .productive-container, .comments-box, .access-container, .boxes'
+    '.hero-container, .box, .productive-container, .comments-box, .access-container, .boxes'
 );
 
 
 animateElements.forEach(el => {
-  observer.observe(el);
+    observer.observe(el);
 });
 
 
@@ -52,9 +52,9 @@ animateElements.forEach(el => {
 // // Button'a tıklandığında
 // submitButton.addEventListener('click', (e) => {
 //   e.preventDefault(); // Formun submit olmasını engelle
-  
+
 //   const emailValue = emailInput.value.trim();
-  
+
 //   if (emailValue === '') {
 //     // Boş alan kontrolü
 //     errorMessage.textContent = 'Email adresi boş bırakılamaz!';
@@ -79,5 +79,42 @@ animateElements.forEach(el => {
 //   errorMessage.style.display = 'none';
 //   emailInput.classList.remove('error');
 // });
+
+
+const emailInput = document.querySelector(".email-input");
+const emailBtn = document.querySelector(".email-btn");
+const errorMsg = document.querySelector(".error");
+
+
+const emailValidation = (email) => {
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+
+emailBtn.addEventListener("click", (e) => {
+
+    e.preventDefault();
+
+    const emailValue = emailInput.value.trim();
+
+    if (emailValue == "") {
+
+        errorMsg.classList.add("show")
+
+    } else if (!emailValidation(emailValue)) {
+
+        errorMsg.classList.add("show")
+
+    } else {
+        alert("email basariyla gönderildi.")
+    }
+})
+
+
+emailInput.addEventListener("click", () => {
+    errorMsg.classList.remove("show");
+})
 
 
