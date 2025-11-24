@@ -250,8 +250,6 @@ body {
     min-height: 100vh;
     background-color: var(--color-navy-850);
     color: white;
-
-
     background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 1050px, hsl(218, 28%, 13%) 1050px);
     background-size: 100% auto;
     background-position: center 20%;
@@ -573,6 +571,28 @@ footer img {
 }
 
 
+/* intersection observer */
+
+.hero-container,
+.box,
+.productive-container,
+.comments-box,
+.access-container,
+.boxes {
+
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+
+.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 /*--------- MEDIA QUERY ---------*/
 
 
@@ -580,7 +600,7 @@ footer img {
 @media screen and (max-width:850px) {
 
     body {
-        background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 550px, hsl(218, 28%, 13%) 8550px);
+       background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 700px, hsl(218, 28%, 13%) 800px);
         background-size: 100% auto;
         background-position: center 12%;
         background-repeat: no-repeat;
@@ -799,32 +819,3 @@ footer img {
     }
 }
 
-
-
-
-/* Gözlemlenen tüm ana konteynerler için başlangıç görünümünü ayarla */
-
-.hero-container,
-.box,
-.productive-container,
-.comments-box,
-.access-container,
-.boxes
-
-/* Feature kutuları da ayrı ayrı animasyon alabilir */
-    {
-    /* Animasyon için yumuşak geçişi (transition) tanımla */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
-    /* Başlangıç Durumu: Hafifçe aşağıda ve gizli */
-    opacity: 0;
-    transform: translateY(40px);
-}
-
-
-/* JavaScript bu sınıfı eklediğinde animasyon gerçekleşir */
-.animate-in {
-    /* Bitiş Durumu: Tamamen görünür ve orijinal konumunda */
-    opacity: 1;
-    transform: translateY(0);
-}
