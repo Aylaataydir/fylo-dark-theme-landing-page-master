@@ -18,45 +18,53 @@ document.querySelectorAll(
 
 
 
-
-
-
 // EMAIL VALIDATION 
 
 const emailInput = document.querySelector(".email-input");
 const emailBtn = document.querySelector(".email-btn");
-const errorMsg = document.querySelector(".error");
+const msg = document.querySelector(".msg");
 
 
 const emailValidation = (email) => {
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
 }
 
 
 emailBtn.addEventListener("click", (e) => {
 
-    e.preventDefault();
+  e.preventDefault();
 
-    const emailValue = emailInput.value.trim();
+  const emailValue = emailInput.value.trim();
 
-    if (emailValue == "") {
+  if (emailValue == "") {
 
-        errorMsg.classList.add("show")
+    msg.classList.add("show")
 
-    } else if (!emailValidation(emailValue)) {
+  } else if (!emailValidation(emailValue)) {
 
-        errorMsg.classList.add("show")
+    msg.classList.add("show")
 
-    } else {
-        alert("email basariyla gönderildi.")
-    }
+  } else if (emailValidation(emailValue)) {
+    
+    msg.textContent = "Thanks for signing up!";
+    msg.classList.add("show")
+    msg.style.color = "#8ADAE3"
+    emailInput.value = ""
+  }
+
+})
+
+emailInput.addEventListener("keydown", (e) => {
+  
+  if(e.key == "Enter") emailBtn.click()
+
 })
 
 
-emailInput.addEventListener("click", () => {
-    errorMsg.classList.remove("show");
+emailInput.addEventListener("input", () => {
+  msg.classList.remove("show");
 })
 
 

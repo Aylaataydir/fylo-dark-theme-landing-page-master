@@ -254,7 +254,7 @@ body {
     background-size: 100% auto;
     background-position: center 20%;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+   
 }
 
 main {
@@ -439,11 +439,15 @@ li:hover {
     padding: 3rem 5rem;
     text-align: center;
     max-width: 53.9375rem;
+    width: 90%;
     box-shadow: 5px 5px 5px rgb(11, 11, 11);
     position: absolute;
     top: -140px;
-    left: 20%;
-}
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    
+} 
 
 .email-box {
     margin-block-start: 2rem;
@@ -480,7 +484,7 @@ li:hover {
     background: linear-gradient(90deg, var(--gradient-1-end) 0%, var(--gradient-1-start) 100%);
 }
 
-.error {
+.msg {
     opacity: 0;
     color: var(--color-red-500);
     text-align: left;
@@ -490,7 +494,7 @@ li:hover {
     transition: all 0.6s ease-in-out;
 }
 
-.error.show {
+.msg.show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -600,7 +604,7 @@ footer img {
 @media screen and (max-width:850px) {
 
     body {
-       background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 700px, hsl(218, 28%, 13%) 800px);
+        background-image: url("./images/bg-curvy-desktop.svg"), linear-gradient(to bottom, transparent 700px, hsl(218, 28%, 13%) 800px);
         background-size: 100% auto;
         background-position: center 12%;
         background-repeat: no-repeat;
@@ -653,9 +657,12 @@ footer img {
     /* access  */
 
     .access-container {
-        max-width: 30rem;
+        width: 30rem;
         padding: 3rem 2.5rem;
         top: -14.375rem;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
 
     }
 
@@ -674,6 +681,7 @@ footer img {
 
     footer {
         padding-block-start: 16.0625rem;
+        
     }
 
     footer .boxes {
@@ -794,10 +802,11 @@ footer img {
     /* access  */
 
     .access-container {
-        max-width: 21rem;
+        width: 21rem;
         padding: 2.5rem 1.5rem;
         top: -14.375rem;
-        left: 7%;
+
+
     }
 
     /* footer  */
@@ -818,4 +827,3 @@ footer img {
         justify-content: center;
     }
 }
-
